@@ -1,0 +1,10 @@
+<html>
+  <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+  <script>
+    const SocketCLient = io("localhost:8000");
+    SocketCLient.emit("fcli", {});
+    SocketCLient.on("pm", (message) => {
+      console.log(message);
+    });
+  </script>
+</html>
